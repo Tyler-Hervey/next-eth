@@ -2,6 +2,10 @@
 
 import Image from 'next/image'
 import { useEffect } from 'react'
+interface Window {
+  ethereum?: any;
+  web3?: any;
+}
 
 export default function  Home () {
   useEffect(() => {
@@ -9,6 +13,8 @@ export default function  Home () {
       // with metamask we have access to window.ethereum & to window.web3
       // metamask injects a global API into websites
       // allows users to request users, acccounts, data, etc
+      console.log('window.ethereum', window.ethereum);
+      console.log('window.web3', window.web3);
     }
   } ,[]);
 
